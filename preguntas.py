@@ -133,7 +133,8 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
-    return
+    tbl0['suma'] = tbl0['_c0']+tbl0['_c2']
+    return tbl0
 
 
 def pregunta_09():
@@ -224,4 +225,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_07())
+print(pregunta_08())
