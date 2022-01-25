@@ -66,7 +66,7 @@ def pregunta_04():
     E    4.785714
     Name: _c2, dtype: float64
     """
-    return
+    return tbl0.groupby('_c1').mean()['_c2']
 
 
 def pregunta_05():
@@ -220,4 +220,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_03())
+print(pregunta_04())
