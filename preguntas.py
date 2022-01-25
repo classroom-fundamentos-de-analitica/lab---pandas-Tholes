@@ -95,7 +95,11 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    return
+    def upper(s:str):
+        return s.upper()
+
+
+    return list(map(upper,sorted(tbl1['_c4'].unique())))
 
 
 def pregunta_07():
@@ -220,4 +224,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_05())
+print(pregunta_06())
