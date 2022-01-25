@@ -50,7 +50,8 @@ def pregunta_03():
     Name: _c1, dtype: int64
 
     """
-    return
+    
+    return tbl0['_c1'].value_counts().sort_index()
 
 
 def pregunta_04():
@@ -219,4 +220,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_02())
+print(pregunta_03())
