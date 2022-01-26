@@ -133,8 +133,9 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
-    tbl0['suma'] = tbl0['_c0']+tbl0['_c2']
-    return tbl0
+    df = tbl0.copy()
+    df['suma'] = tbl0['_c0']+tbl0['_c2']
+    return df
 
 
 def pregunta_09():
@@ -152,10 +153,11 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
+    df = tbl0.copy()
     for index,row in tbl0.iterrows():
-        tbl0.loc[index, 'year'] = row['_c3'].split('-')[0]
+        df.loc[index, 'year'] = row['_c3'].split('-')[0]
     
-    return tbl0
+    return df
 
 
 def pregunta_10():
@@ -228,4 +230,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_09())
+print(pregunta_08())
