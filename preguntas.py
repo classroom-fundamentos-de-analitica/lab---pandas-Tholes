@@ -152,7 +152,10 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
-    return
+    for index,row in tbl0.iterrows():
+        tbl0.loc[index, 'year'] = row['_c3'].split('-')[0]
+    
+    return tbl0
 
 
 def pregunta_10():
@@ -225,4 +228,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_08())
+print(pregunta_09())
