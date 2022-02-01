@@ -174,7 +174,9 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    return
+    df = tbl0.groupby('_c1').agg({'_c2':lambda x: sorted(list(x))})
+    df['_c2'] = df['_c2'].apply(lambda x: ':'.join(map(str,x)))
+    return df
 
 
 def pregunta_11():
@@ -230,4 +232,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_08())
+print(pregunta_10())
