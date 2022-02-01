@@ -195,7 +195,9 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return
+    df = tbl1.groupby('_c0').agg({'_c4':lambda x: sorted(list(x))}).reset_index()
+    df['_c4'] = df['_c4'].apply(lambda x: ','.join(map(str,x)))
+    return df
 
 
 def pregunta_12():
@@ -232,4 +234,4 @@ def pregunta_13():
     """
     return
 
-print(pregunta_10())
+print(pregunta_11())
